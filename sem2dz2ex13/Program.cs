@@ -5,9 +5,14 @@
 
 Console.Write("Введите число ");
 int num1 = Convert.ToInt32(Console.ReadLine());
-if (num1 >= 1000)
+if (num1 > 99 && num1 < 1000)
 {
-    while (num1 > 1000)
+    num1 = num1 % 10;
+    Console.Write($"Третья цифра вашего числа: {num1}");
+}
+else if (num1 >= 1000)
+{
+    while (num1 >= 1000)
     {
         num1 = num1 / 10;
     }
